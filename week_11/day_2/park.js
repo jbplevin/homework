@@ -12,4 +12,12 @@ Park.prototype.removeByType = function(type){
     }
   }
 }
+Park.prototype.moreThanTwo = function(){
+  var enclosure = this.enclosure;
+  for(dinosaur of enclosure){
+    if(dinosaur.offspringPerYear > 2){
+      return enclosure.splice(enclosure.indexOf(dinosaur), 1);
+    }
+  }
+}
 module.exports = Park;
