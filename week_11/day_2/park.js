@@ -22,13 +22,11 @@ Park.prototype.moreThanTwo = function(){
 }
 Park.prototype.calculateDinosaurs = function(numberOfYears){
   var enclosure = this.enclosure;
-  var year = 0;
-  var totalDinos = 0;
-  for(year = 0; year < numberOfYears; year++){
-    for(dinosaur of enclosure){
-    totalDinos += dinosaur.offspringPerYear;
-    return totalDinos;
+    for(dino of enclosure){
+      var totalDinos = 0;
+      var totalOfEach = Math.pow(dino.offspringPerYear, numberOfYears);
+      totalDinos += totalOfEach;
     }
-  }
+  return totalDinos;
 }
 module.exports = Park;

@@ -42,13 +42,13 @@ describe('Park', function(){
   assert.strictEqual(park.calculateDinosaurs(1), 4);
 });
 
-// it('should be able to calculate number of dinosaurs after 2 years starting with 1 dinosaur', function(){
-//   park.addDinosaur(tyrannosaurus);
-//   assert.strictEqual(park.calculateDinosaurs(2), 16);
-// });
-//
+it('should be able to calculate number of dinosaurs after 2 years starting with 1 dinosaur', function(){
+  park.addDinosaur(dinosaur2);
+  assert.strictEqual(park.calculateDinosaurs(2), 16);
+});
+// 
 // it('should be able to calculate number of dinosaur after year two starting with 2 dinosaurs', function(){
-//   park.addDinosaur(tyrannosaurus);
+//   park.addDinosaur(dinosaur2);
 //   park.addDinosaur(dilophosaurus);
 //   assert.strictEqual(park.calculateDinosaurs(2), 25);
 // });
