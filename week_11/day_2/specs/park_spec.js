@@ -11,6 +11,8 @@ describe('Park', function(){
     dinosaur1 = new Dinosaur('Velociraptor', 2);
     dinosaur2 = new Dinosaur('Tyrannossaurus', 4);
     dinosaur3 = new Dinosaur('Triceratops', 2);
+    dilophosaurus = new Dinosaur('dilophosaurus', 3);
+
   })
   it('should have an enslosure', function(){
     park.addDinosaur(dinosaur1);
@@ -46,10 +48,10 @@ it('should be able to calculate number of dinosaurs after 2 years starting with 
   park.addDinosaur(dinosaur2);
   assert.strictEqual(park.calculateDinosaurs(2), 16);
 });
-// 
-// it('should be able to calculate number of dinosaur after year two starting with 2 dinosaurs', function(){
-//   park.addDinosaur(dinosaur2);
-//   park.addDinosaur(dilophosaurus);
-//   assert.strictEqual(park.calculateDinosaurs(2), 25);
-// });
+
+it('should be able to calculate number of dinosaur after year two starting with 2 dinosaurs', function(){
+  park.addDinosaur(dinosaur2);
+  park.addDinosaur(dilophosaurus);
+  assert.strictEqual(park.calculateDinosaurs(2), 25);
+});
 })

@@ -22,8 +22,8 @@ Park.prototype.moreThanTwo = function(){
 }
 Park.prototype.calculateDinosaurs = function(numberOfYears){
   var enclosure = this.enclosure;
+  var totalDinos = 0;
     for(dino of enclosure){
-      var totalDinos = 0;
       var totalOfEach = Math.pow(dino.offspringPerYear, numberOfYears);
       totalDinos += totalOfEach;
     }
